@@ -63,11 +63,26 @@
 						<!-- Right Side Of Navbar -->
 						<ul class="navbar-nav ms-auto">
 							<div class="input-group rounded">
-								<input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-								<span class="input-group-text border-0" id="search-addon">
-									<li><a href=""><i class="bi bi-search"></i></a></li>
-								</span>
-							</div>	
+
+							</div>						
+
+							<form action="/products/autocomplete" method="POST" enctype="multipart/form-data">
+								@csrf
+								<div class="row">
+									<div class="col-xs-12 col-sm-12 col-md-12">
+										<div class="form-group">
+											<input name="search" type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+											@error('search')
+											<div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+											@enderror
+										</div>
+									</div>
+
+									<button type="submit" class="btn btn-primary">
+										<i class="bi bi-search"></i>
+									  </button>
+								</div>
+							</form>
 
 							<li class="nav-item dropdown">
 								<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

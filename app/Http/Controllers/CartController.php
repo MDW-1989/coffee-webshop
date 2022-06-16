@@ -48,12 +48,9 @@ class CartController extends Controller
 					],
 				]
 			);
+			session()->flash('success', 'Item Cart is Updated Successfully !');
+			return redirect()->route('cart.list');
 		}
-
-
-        session()->flash('success', 'Item Cart is Updated Successfully !');
-
-        return redirect()->route('cart.list');
     }
 
     public function removeCart(Request $request)

@@ -14,7 +14,7 @@
 			<div class="row">
 				<div class="col-lg-12 margin-tb">
 					<div class="pull-left mb-2">
-						<h2>Add Product</h2>
+						<h2>Add Product</h2>  <i class="bi bi-apple"></i>
 					</div>
 					<div class="pull-right">
 						<a class="btn btn-primary" href="/products"> Back</a>

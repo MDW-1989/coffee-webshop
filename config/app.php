@@ -181,6 +181,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+
 		Darryldecode\Cart\CartServiceProvider::class,
 		
         /*
@@ -213,5 +214,7 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
 		'Cart' => Darryldecode\Cart\Facades\CartFacade::class,
     ])->toArray(),
+
+    'Cart' => Darryldecode\Cart\Facades\CartFacade::class
 
 ];

@@ -16,6 +16,10 @@
     
 <h1>Welcome to the User Index</h1>
 
+<div class="pull-right mb-2">
+  <a class="btn btn-success" href="/users/create"> Create User</a>
+</div>	
+
 
       
 <table class="table">

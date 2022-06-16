@@ -10,6 +10,35 @@
 	</head>
 	<body>
 		@section('content')
+
+        <form action="/products/autocomplete" method="POST" enctype="multipart/form-data">
+            @csrf
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <input name="search" type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                        @error('search')
+                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-search"></i>
+                  </button>
+            </div>
+        </form>
+
+
+
+
+
+
+
+
+
+
+
 		<div class="container mt-2">
 			<div class="row">
 				<div class="col-lg-12 margin-tb">
@@ -69,6 +98,5 @@
 			</nav>			
 		</div>
 		@endsection		
-		
 	</body>
 </html>
